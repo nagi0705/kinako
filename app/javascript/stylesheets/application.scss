@@ -1,0 +1,51 @@
+@use '~bootstrap/scss/bootstrap';
+/* ナビゲーションバーのスタイル */
+body {
+    text-align: center;
+}
+
+.navbar {
+    background-color: #f8f9fa; /* 明るい灰色の背景 */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* ソフトなシャドウを追加 */
+}
+
+.container h1 {
+    color: #ff99ff;
+    font-family: serif;
+    text-align: center;
+}
+
+.navbar-brand {
+    padding: 5px 0; /* ブランドロゴのためのパディング調整 */
+}
+
+.nav-link {
+    color: #333; /* ダークグレーのテキスト */
+}
+
+.nav-link:hover {
+    color: #0056b3; /* ホバー時はブルーに変更 */
+}
+
+/* フッターのスタイル */
+footer {
+    background-color: #343a40; /* ダークグレーの背景 */
+    color: white; /* 白文字 */
+    padding: 20px 0; /* 上下のパディング */
+}
+
+footer a {
+    color: #bbbbbb; /* ライトグレーのリンク色 */
+    text-decoration: none; /* 下線を除去 */
+}
+
+footer a:hover {
+    color: #ffff99; /* ホバー時は白色に変更 */
+}
+
+/* レスポンシブデザインの調整 */
+@media (max-width: 768px) {
+    .navbar-toggler {
+        background-color: #dddddd; /* トグルボタンの背景色 */
+    }
+}

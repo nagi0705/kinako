@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+<h1>Posts</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="sidebar">
+        <p>サイドバーのコンテンツ</p>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <table class="table table-striped">
+        <% @posts.each do |post| %>
+          <tr>
+            <td><%= post.title %></td>
+            <td><%= link_to 'Show', post %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </table>
+      <%= link_to 'New Post', new_post_path %>
+    </div>
+  </div>
+</div>

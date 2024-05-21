@@ -1,0 +1,17 @@
+ja:
+  activerecord:
+    models:
+      post_image: "投稿画像"
+    attributes:
+      post_image:
+        image: "画像"
+        shop_name: "ショップ名"
+        caption: "説明"
+    errors:
+      models:
+        post_image:
+          attributes:
+            image:
+              blank: "を選択してください。"
+            shop_name:
+              blank: "を入力してください。"

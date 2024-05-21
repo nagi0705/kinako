@@ -1,0 +1,24 @@
+<!-- ユーザーの詳細 -->
+<div class="profile-container">
+  <h3 class="profile-name"><%= @user.name %></h3>
+  <%= image_tag @user.get_profile_image(100, 100) %>
+  <% if @user.id == current_user.id %>
+    <p><%= link_to "プロフィール編集", edit_user_path(@user) %></p>
+  <% end %>
+</div>
+
+<!-- 並び替えオプション -->
+<div class="sorting">
+  <%= form_with url: user_path(@user), method: :get, local: true do |form| %>
+    <%= form.label :order, "並び替え:" %>
+    <%= form.select :order, options_for_select([
+      ['新しい順', 'newest'],
+      ['古い順', 'oldest'],
+      ['いいね順', 'likes']
+    ], selected: params[:order]) %>
+    <%= form.submit "並び替え" %>
+  <% end %>
+</div>
+
+<!-- ユーザーの投稿一覧 -->
+<%= render 'post_images/list', post_images: @post_images %>
